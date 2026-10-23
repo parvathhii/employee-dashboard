@@ -1,0 +1,361 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Poppins', sans-serif;
+  color: #25234f;
+  background: #f6f3ff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  color: #25234f;
+  background: linear-gradient(135deg, #faf8ff, #eee9ff);
+}
+
+.navbar {
+  background: linear-gradient(110deg, #8875b1, #615c98);
+  padding: 15px 0;
+  box-shadow: 0 4px 16px rgba(76, 63, 126, 0.12);
+}
+
+.navbar-container {
+  max-width: 1400px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white !important;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.brand-icon {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav {
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-link {
+  color: #f8f5ff !important;
+  padding: 9px 16px !important;
+  border-radius: 24px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.nav-link.active {
+  color: #46336f !important;
+  background: #f9e7ff;
+  font-weight: 600;
+}
+
+.dashboard-container {
+  max-width: 1400px;
+  padding-top: 32px;
+  padding-bottom: 40px;
+}
+
+.dashboard-heading {
+  margin-bottom: 24px;
+}
+
+.dashboard-heading h2,
+.form-card h2 {
+  margin-bottom: 6px;
+  color: #25234f;
+  font-size: clamp(1.55rem, 3vw, 2.15rem);
+  font-weight: 700;
+}
+
+.dashboard-heading p {
+  margin: 0;
+  color: #706b96;
+  font-size: 0.98rem;
+}
+
+.employee-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.employee-card {
+  position: relative;
+  min-width: 0;
+  padding: 20px 16px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid #e9e2fb;
+  border-radius: 18px;
+  box-shadow: 0 6px 20px rgba(81, 66, 133, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.employee-card::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: #d5baff;
+  content: '';
+}
+
+.employee-card:nth-child(5n + 2)::before {
+  background: #f6c4df;
+}
+
+.employee-card:nth-child(5n + 3)::before {
+  background: #b9e8df;
+}
+
+.employee-card:nth-child(5n + 4)::before {
+  background: #ffd7bd;
+}
+
+.employee-card:nth-child(5n + 5)::before {
+  background: #bcd9ff;
+}
+
+.employee-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 26px rgba(81, 66, 133, 0.14);
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.avatar {
+  display: flex;
+  width: 58px;
+  height: 58px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  color: #6047ac;
+  background: #e8ddff;
+  border-radius: 50%;
+}
+
+.employee-card:nth-child(5n + 2) .avatar {
+  color: #a22e70;
+  background: #ffe0f0;
+}
+
+.employee-card:nth-child(5n + 3) .avatar {
+  color: #14796f;
+  background: #d4f4ec;
+}
+
+.employee-card:nth-child(5n + 4) .avatar {
+  color: #a65b2d;
+  background: #ffe6d5;
+}
+
+.employee-card:nth-child(5n + 5) .avatar {
+  color: #2864a8;
+  background: #dcecff;
+}
+
+.employee-id {
+  padding: 5px 11px;
+  flex-shrink: 0;
+  color: #51408c;
+  background: #f0eaff;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.employee-card h3 {
+  margin: 0 0 12px;
+  color: #25234f;
+  font-size: 0.98rem;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.employee-email {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  color: #716b91;
+  font-size: 0.78rem;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.employee-email svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: #8067bb;
+}
+
+.status-message {
+  color: #706b96;
+}
+
+.form-container {
+  max-width: 650px;
+  padding-top: 42px;
+  padding-bottom: 48px;
+}
+
+.form-card {
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #e9e2fb;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(81, 66, 133, 0.1);
+}
+
+.form-card h2 {
+  margin-bottom: 24px;
+}
+
+.form-label {
+  color: #35315e;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.form-control {
+  min-height: 44px;
+  padding: 10px 12px;
+  color: #25234f;
+  background-color: #fdfcff;
+  border: 1px solid #dcd3f4;
+  border-radius: 9px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.88rem;
+}
+
+.form-control::placeholder {
+  color: #a29bbd;
+}
+
+.form-control:focus {
+  background-color: white;
+  border-color: #9480d0;
+  box-shadow: 0 0 0 3px rgba(148, 128, 208, 0.15);
+}
+
+.submit-button {
+  min-width: 135px;
+  padding: 11px 24px;
+  color: white;
+  background: linear-gradient(110deg, #8570b7, #6556a1);
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.submit-button:hover {
+  color: white;
+  background: #59488f;
+}
+
+@media (max-width: 1100px) {
+  .employee-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .employee-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .employee-card {
+    padding: 16px 12px;
+  }
+
+  .card-top {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .avatar {
+    width: 48px;
+    height: 48px;
+  }
+
+  .employee-card h3 {
+    font-size: 0.88rem;
+  }
+
+  .employee-email {
+    font-size: 0.72rem;
+  }
+
+  .navbar-brand {
+    gap: 6px;
+    font-size: 1rem;
+  }
+
+  .navbar-brand svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .navbar-nav {
+    gap: 2px;
+  }
+
+  .nav-link {
+    padding: 8px !important;
+    font-size: 0.76rem;
+  }
+
+  .dashboard-container {
+    padding-top: 24px;
+  }
+}
+
+@media (max-width: 380px) {
+  .employee-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .navbar-brand {
+    font-size: 0.88rem;
+  }
+
+  .nav-link {
+    font-size: 0.7rem;
+  }
+
+  .form-card {
+    padding: 20px;
+  }
+}

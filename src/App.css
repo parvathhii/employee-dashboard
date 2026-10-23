@@ -1,0 +1,36 @@
+
+body {
+  margin: 0;
+  background: #f4f7fb;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  color: #243b64;
+  font-weight: 700;
+}
+
+.nav-link.active {
+  color: white !important;
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+.table {
+  vertical-align: middle;
+}
+
+.table th,
+.table td {
+  padding: 14px;
+}
+
+.form-card {
+  max-width: 600px;
+  margin: auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
