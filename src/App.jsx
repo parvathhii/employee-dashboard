@@ -7,6 +7,19 @@ function Home() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
+  const malluNames = [
+    'Anjali Nair',
+    'Arjun Menon',
+    'Meera Pillai',
+    'Nikhil Kumar',
+    'Aparna Krishnan',
+    'Rahul Varghese',
+    'Diya Thomas',
+    'Vivek Balakrishnan',
+    'Kavya Mohan',
+    'Adithyan Raj',
+  ];
+
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users')
       .then((response) => {
@@ -16,7 +29,16 @@ function Home() {
         return response.json();
       })
       .then((data) => {
-        setEmployees(data);
+        setEmployees(data.map((employee, index) => {
+          const name = malluNames[index % malluNames.length];
+          const emailName = name.toLowerCase().replaceAll(' ', '.');
+
+          return {
+            ...employee,
+            name,
+            email: `${emailName}@northstar.example`,
+          };
+        }));
         setLoading(false);
       })
       .catch(() => {
